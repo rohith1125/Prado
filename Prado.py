@@ -31,12 +31,12 @@ f=f.replace('z',',')
 f=f.replace('<>','')
 f=f.replace('><','')
 try:
-    o=open(f'{file[-1:(len(file)-3)]}.bf','x')
+    o=open(f'{file[-1:(len(file)-3)]}.bf','a')
     o.write(f'{f}\n')
 except:
     print('Could not create file. Output:')
 else:
-    print('Created \'.bf\'. Output:')
+    print('Created/edited \'.bf\'. Output:')
 finally:
     print('')
     print(f)
