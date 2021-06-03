@@ -62,4 +62,4 @@ This can be translated into Prado as:
 </pre>
 
 ### Interpreter (WIP)
-I think Prado would need a Python interpreter to scan a `.pd` file and convert it to BF. This is currently a work in progress, saved as the `Prado.py` file in this Repo.
+Prado needs a Python interpreter to scan a `.pdn` file and convert it to BF. This is currently a work in progress, saved as the `Prado.py` file in this Repo.
