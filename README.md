@@ -3,14 +3,16 @@
 
 ---
 ### Key
-`>` x
-`<` y
-`+` _n_
-`-` -_n_
-`.` =
-`,` z
-`[` (
-`]` )
+BF | Prado
+--- | ---
+`>` | x
+`<` | y
+`+` | _n_
+`-` | -_n_
+`.` | =
+`,` | z
+`[` | (
+`]` | )
 
 Where _n_ is the amount of `+`s or `-`s, and multiple `x`s or `y`s are given the power of their length. For example:
 
