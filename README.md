@@ -44,7 +44,7 @@ In BF, the following program outputs "`Hello world!`":
 ```
 This can be translated into Prado as:
 ```
-[Q1]: 8(x+9y-1)
+8(x+9y-1)
 =y+10(x+3y-1)x-1
 =y+2(x+3y-1)x+1
 =xy
