@@ -60,9 +60,10 @@ while z==0:
                 cls()
     elif x=='4':
         cls()
+        print('')
+        bf=input('BF code: ')
         try:
-            print('')
-            bf=brainfuck.evaluate(input('BF code: '))
+            bf=brainfuck.evaluate(bf)
         except:
             print('Failed!')
         else:

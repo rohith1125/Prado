@@ -2,6 +2,20 @@
 <p align="center">A BF-derivative esoteric programming language.</p>
 
 ---
+### Intro
+Prado (dedicated to [Isabel Lifu](https://github.com/Isabel-Lifu-211207-XPrado)) is an esolang that translates to [BF](https://en.wikipedia.org/wiki/Brainfuck) to be interpreted.
+
+### Interpreter (WIP)
+`Prado.py` is a WIP Python interpreter for `Windows 10` that translates between Prado, BF and text.
+
+### Dependencies
+The interpreter requires the following `Python 3` modules:
+```
+python -m pip install brainfuck
+python -m pip install brainfuck_interpreter
+```
+(Yes, both are required.)
+
 ### Key
 BF | Prado
 --- | ---
@@ -58,6 +72,3 @@ This can be translated into Prado as:
 =x+1
 =xy
 ```
-
-### Interpreter (WIP)
-`Prado.py` is a WIP Python interpreter to translate between Prado, BF and text.
