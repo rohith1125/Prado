@@ -60,4 +60,4 @@ This can be translated into Prado as:
 ```
 
 ### Interpreter (WIP)
-`Prado.py` is a Python interpreter to scan a `.pdn` file and convert it to BF. This is currently a work in progress.
+`Prado.py` is a WIP Python interpreter to translate between Prado, BF and text.
