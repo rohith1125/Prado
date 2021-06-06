@@ -30,7 +30,7 @@ BF | Prado
 
 Where _n_ is the amount of `+`s or `-`s, and multiple `x`s or `y`s are given the power of their length. `x` or `y` directly followed by a numeral indicates an exponent. For example:
 
-```
+```brainfuck
 >++++[>>++++++++<<-]>++[>---<-]>
 ```
 Becomes:
@@ -42,7 +42,7 @@ x+4(x2+8y2-1)x+2(x-3y-1)x
 ### `Hello world!` in Prado
 
 In BF, the following program outputs "`Hello world!`":
-```
+```brainfuck
 ++++++++[>+++++++++<-]>.
 <++++++++++[>+++<-]>-.
 <++[>+++<-]>+.
