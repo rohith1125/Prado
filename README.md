@@ -5,7 +5,7 @@
 ### Intro
 Prado (dedicated to [Isabel Lifu](https://github.com/Isabel-Lifu-211207-XPrado)) is an esolang that translates to [BF](https://en.wikipedia.org/wiki/Brainfuck) to be interpreted.
 
-Until Prado is added to Linguist, the `JavaScript` percentage in this Repo represents `Prado`.
+Until Prado is added to Linguist, the `JavaScript` percentage in this Repo represents `Prado`, whose colour will be gold.
 
 ### Interpreter (WIP)
 `Prado.py` is a WIP Python interpreter for `Windows 10` that translates between Prado, BF and text.
