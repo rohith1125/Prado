@@ -9,9 +9,10 @@ while z==0:
     print('1. Prado to text')
     print('2. Text to Prado')
     print('3. Prado to BF')
-    print('4. BF to text')
-    print('5. Text to BF')
-    print('6. Exit')
+    print('4. BF to Prado')
+    print('5. BF to text')
+    print('6. Text to BF')
+    print('7. Exit')
     print('')
     x=input('> ')
     cls()
@@ -19,21 +20,19 @@ while z==0:
         print('')
         print('Coming soon!')
     elif x=='1' or x=='3':
-        s=0
-        while s==0:
-            print('')
-            file=input('Path to \'.pdn\' file: ')
-            try:
-                r=open(file,'r')
-            except:
-                cls()
-            else:
-                s=1
+        print('')
+        print('Enter blank line when done.')
+        print('')
+        print('Prado code:')
+        f=''
+        y=' '
+        while y!='':
+            y=input('> ')
+            if y!='':
+                f+=y
         cls()
-        f=r.read()
-        r.close()
-        n=99
-        for i in range(99):
+        n=255
+        for i in range(n):
             n-=1
             f=f.replace(f'x{str(n)}','>'*(n))
             f=f.replace(f'y{str(n)}','<'*(n))
@@ -58,7 +57,23 @@ while z==0:
                 print(f'"{brainfuck.evaluate(f)}"')
             else:
                 cls()
+        else:
+            cls()
+            print('')
+            print('Failed!')
     elif x=='4':
+        cls()
+        print('')
+        print('Coming soon!')
+        """
+        bf=input('BF code: ')
+        if bf!='':
+            #BF to Prado
+            cls()
+        else:
+            cls()
+        """
+    elif x=='5':
         cls()
         print('')
         bf=input('BF code: ')
@@ -73,14 +88,12 @@ while z==0:
                 print(f'"{bf}"')
             else:
                 cls()
-    elif x=='5':
+    elif x=='6':
         print('')
         print('Coming soon!')
-    elif x=='6':
+    elif x=='7':
         z=1
     else:
         cls()
         print('')
         print('Invalid!')
-print('')
-input('Press Enter to exit.')
