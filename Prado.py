@@ -16,63 +16,64 @@ while z==0:
     print('')
     x=input('> ')
     cls()
-    if x=='2':
+    if x=='2' or x=='4' or x=='6':#INCOMPLETE
         print('')
         print('Coming soon!')
-    elif x=='1' or x=='3':
+    elif x=='1' or x=='3' or x=='5':
         print('')
         print('Enter blank line when done.')
         print('')
-        print('Prado code:')
+        print('Code:')
         f=''
         y=' '
         while y!='':
             y=input('> ')
             if y!='':
                 f+=y
-        cls()
-        n=255
-        for i in range(n):
-            n-=1
-            f=f.replace(f'x{str(n)}','>'*(n))
-            f=f.replace(f'y{str(n)}','<'*(n))
-            f=f.replace(f'+{str(n)}','+'*(n))
-            f=f.replace(f'-{str(n)}','-'*(n))
-            f=f.replace(str(n),'+'*(n))
-        f=f.replace('\n','')
-        f=f.replace(' ','')
-        f=f.replace('=','.')
-        f=f.replace('(','[')
-        f=f.replace(')',']')
-        f=f.replace('x','>')
-        f=f.replace('y','<')
-        f=f.replace('z',',')
-        f=f.replace('<>','')
-        f=f.replace('><','')
-        print('')
-        if f!='':
-            if x=='3':
-                print(f'{f}')
-            elif x=='1':
-                print(f'"{brainfuck.evaluate(f)}"')
-            else:
-                cls()
-        else:
+        if x=='1' or x=='3':
+            cls()
+            if x=='1' or x=='3':
+                n=255
+                for i in range(n):
+                    n-=1
+                    f=f.replace(f'x{str(n)}','>'*(n))
+                    f=f.replace(f'y{str(n)}','<'*(n))
+                    f=f.replace(f'+{str(n)}','+'*(n))
+                    f=f.replace(f'-{str(n)}','-'*(n))
+                    f=f.replace(str(n),'+'*(n))
+                f=f.replace('\n','')
+                f=f.replace(' ','')
+                f=f.replace('=','.')
+                f=f.replace('(','[')
+                f=f.replace(')',']')
+                f=f.replace('x','>')
+                f=f.replace('y','<')
+                f=f.replace('z',',')
+                f=f.replace('<>','')
+                f=f.replace('><','')
+                print('')
+                if f!='':
+                    if x=='3':
+                        print(f'{f}')
+                    elif x=='1':
+                        print(f'"{brainfuck.evaluate(f)}"')
+                else:
+                    print('Failed!')
+        elif x=='5':
             cls()
             print('')
-            print('Failed!')
+            try:
+                print(f'"{brainfuck.evaluate(f)}"')
+            except:
+                print('Failed!')
     elif x=='4':
-        cls()
-        print('')
-        print('Coming soon!')
-        """
-        bf=input('BF code: ')
         if bf!='':
             #BF to Prado
             cls()
         else:
             cls()
-        """
+            print('')
+            print('Failed!')
     elif x=='5':
         cls()
         print('')
@@ -88,9 +89,6 @@ while z==0:
                 print(f'"{bf}"')
             else:
                 cls()
-    elif x=='6':
-        print('')
-        print('Coming soon!')
     elif x=='7':
         z=1
     else:
