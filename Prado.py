@@ -1,8 +1,16 @@
+'''
+REPOSITORY LINK:
+https://github.com/TurnipGuy30/Prado
+REQUIRED MODULES:
+python -m pip install brainfuck
+python -m pip install brainfuck_interpreter
+'''
 import brainfuck,os,webbrowser
 os.system('color 0a')
 cls=lambda:os.system('cls')
 z=0
 while z==0:
+    e=0
     x=''
     print('')
     print('What would you like to do?')
@@ -19,76 +27,80 @@ while z==0:
     if x=='2' or x=='4' or x=='6':#INCOMPLETE
         print('')
         print('Coming soon!')
-    elif x=='1' or x=='3' or x=='5':
+    elif x=='1' or x=='3' or x=='5':#COMPLETE
         print('')
         print('Enter blank line when done.')
         print('')
-        print('Code:')
+        if x=='1' or x=='3':
+            print('Prado code:')
+        elif x=='4' or x=='5':
+            print('BF code:')
+        elif x=='2' or x=='6':
+            print('Text:')
+        else:
+            cls()
+            break
         f=''
         y=' '
         while y!='':
             y=input('> ')
             if y!='':
                 f+=y
-        if x=='1' or x=='3':
-            cls()
-            if x=='1' or x=='3':
-                n=255
-                for i in range(n):
-                    n-=1
-                    f=f.replace(f'x{str(n)}','>'*(n))
-                    f=f.replace(f'y{str(n)}','<'*(n))
-                    f=f.replace(f'+{str(n)}','+'*(n))
-                    f=f.replace(f'-{str(n)}','-'*(n))
-                    f=f.replace(str(n),'+'*(n))
-                f=f.replace('\n','')
-                f=f.replace(' ','')
-                f=f.replace('=','.')
-                f=f.replace('(','[')
-                f=f.replace(')',']')
-                f=f.replace('x','>')
-                f=f.replace('y','<')
-                f=f.replace('z',',')
-                f=f.replace('<>','')
-                f=f.replace('><','')
+        if f!='':
+            if x=='1' or x=='3':#1#3
+                cls()
+                if x=='1' or x=='3':
+                    n=255
+                    for i in range(n):
+                        n-=1
+                        f=f.replace(f'x{str(n)}','>'*(n))
+                        f=f.replace(f'y{str(n)}','<'*(n))
+                        f=f.replace(f'+{str(n)}','+'*(n))
+                        f=f.replace(f'-{str(n)}','-'*(n))
+                        f=f.replace(str(n),'+'*(n))
+                    f=f.replace('\n','')
+                    f=f.replace(' ','')
+                    f=f.replace('=','.')
+                    f=f.replace('(','[')
+                    f=f.replace(')',']')
+                    f=f.replace('x','>')
+                    f=f.replace('y','<')
+                    f=f.replace('z',',')
+                    f=f.replace('<>','')
+                    f=f.replace('><','')
+                    print('')
+                    if f!='':
+                        if x=='3':
+                            print(f'{f}')
+                        elif x=='1':
+                            print(f'"{brainfuck.evaluate(f)}"')
+                    else:
+                        print('Failed!')
+            elif x=='2' or x=='4' or x=='6':#2#4#6
+                if x=='2' or x=='6':
+                    try:
+                        cls()#f = Text -> BF
+                    except:
+                        e=1
+                if x=='2' or x=='4':
+                    cls()#f = BF -> Prado
+                cls()
                 print('')
-                if f!='':
-                    if x=='3':
-                        print(f'{f}')
-                    elif x=='1':
-                        print(f'"{brainfuck.evaluate(f)}"')
+                if e==0:
+                    print(f'{f}')
                 else:
                     print('Failed!')
-        elif x=='5':
-            cls()
-            print('')
-            try:
-                print(f'"{brainfuck.evaluate(f)}"')
-            except:
-                print('Failed!')
-    elif x=='4':
-        if bf!='':
-            #BF to Prado
-            cls()
-        else:
-            cls()
-            print('')
-            print('Failed!')
-    elif x=='5':
-        cls()
-        print('')
-        bf=input('BF code: ')
-        try:
-            bf=brainfuck.evaluate(bf)
-        except:
-            print('Failed!')
-        else:
-            if bf!='':
+            elif x=='5':#5
                 cls()
                 print('')
-                print(f'"{bf}"')
-            else:
-                cls()
+                try:
+                    print(f'"{brainfuck.evaluate(f)}"')
+                except:
+                    print('Failed!')
+        else:
+            cls()
+            print('')
+            print('Failed!')
     elif x=='7':
         z=1
     else:
