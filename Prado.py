@@ -8,6 +8,13 @@ python -m pip install brainfuck_interpreter
 import brainfuck,os,webbrowser
 os.system('color 0a')
 cls=lambda:os.system('cls')
+def letter_to_brainfuck(letter):
+    num=ord(letter)
+    return '+'*int(num/10)+'[>++++++++++<-]>'+'+'*(num%10)
+
+def brainfuck_print(letter_list):
+    return ''.join([i+'.>\n'for i in letter_list])
+a=['1','2','3','4','5','6']
 z=0
 while z==0:
     e=0
@@ -24,10 +31,7 @@ while z==0:
     print('')
     x=input('> ')
     cls()
-    if x=='2' or x=='4' or x=='6':#INCOMPLETE
-        print('')
-        print('Coming soon!')
-    elif x=='1' or x=='3' or x=='5':#COMPLETE
+    if x in a:
         print('')
         print('Enter blank line when done.')
         print('')
@@ -50,7 +54,7 @@ while z==0:
             if x=='1' or x=='3':#1#3
                 cls()
                 if x=='1' or x=='3':
-                    n=255
+                    n=256
                     for i in range(n):
                         n-=1
                         f=f.replace(f'x{str(n)}','>'*(n))
@@ -73,17 +77,47 @@ while z==0:
                         if x=='3':
                             print(f'{f}')
                         elif x=='1':
-                            print(f'"{brainfuck.evaluate(f)}"')
+                            try:
+                                print(f'"{brainfuck.evaluate(f)}"')
+                            except:
+                                print('Failed!')
                     else:
                         print('Failed!')
             elif x=='2' or x=='4' or x=='6':#2#4#6
                 if x=='2' or x=='6':
                     try:
-                        cls()#f = Text -> BF
+                        f=brainfuck_print([letter_to_brainfuck(i) for i in list(f)])
+                        f=f.replace('\n','')
                     except:
                         e=1
                 if x=='2' or x=='4':
-                    cls()#f = BF -> Prado
+                    n=256
+                    for i in range(n-1):
+                        f=f.replace('>'*(n),f'x{str(n)}')
+                        f=f.replace('<'*(n),f'y{str(n)}')
+                        f=f.replace('+'*(n),f'+{str(n)}')
+                        f=f.replace('-'*(n),f'-{str(n)}')
+                        n-=1
+                    f=f.replace('>','x')
+                    f=f.replace('<','y')
+                    f=f.replace('\n','')
+                    f=f.replace(' ','')
+                    f=f.replace('.','\n=')
+                    f=f.replace('\n=\n','\n=xy\n')
+                    f=f.replace('[','(')
+                    f=f.replace(']',')')
+                    f=f.replace(',','z')
+                    f=f.replace('=+','=')
+                    f=f.replace('(+','(')
+                    f=f.replace('+)','+1)')
+                    f=f.replace('+\n','+1\n)')
+                    f=f.replace('-)','-1)')
+                    f=f.replace('-\n','-1\n)')
+                    f=f.replace('\n)=','\n=')
+                    if f[0]=='+':
+                        f=f[1:]
+                    if f[len(f)-1]=='x':
+                        f+='y'
                 cls()
                 print('')
                 if e==0:
@@ -101,7 +135,7 @@ while z==0:
             cls()
             print('')
             print('Failed!')
-    elif x=='7':
+    elif x==str(int(a[len(a)-1])+1):
         z=1
     else:
         cls()
