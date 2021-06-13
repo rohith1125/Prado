@@ -116,7 +116,9 @@ while z==0:
                     f=f.replace('\n)=','\n=')
                     if f[0]=='+':
                         f=f[1:]
-                    if f[len(f)-1]=='x':
+                    if f[len(f)-1]=='=':
+                        f+='xy'
+                    elif f[len(f)-1]=='x':
                         f+='y'
                 cls()
                 print('')
