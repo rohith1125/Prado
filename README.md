@@ -10,7 +10,7 @@ Until Prado is added to Linguist, the `JavaScript` percentage in this Repo repre
 ### Interpreter
 `Prado.py` is a ~~WIP~~(done!) Python interpreter for `Windows 10` that translates between Prado, BF and text.
 
-The text-to-BF functionality is thanks to [this `Stack Exchange` post](https://codereview.stackexchange.com/questions/179492/text-to-brainfuck-translator).
+The text-to-BF functionality is thanks to [this `Stack Exchange` post](https://codereview.stackexchange.com/questions/179492/text-to-brainfuck-translator). Long texts may take a while to encode, but it should get there eventually. Probably.
 
 ### Dependencies
 The interpreter requires the following `Python 3` modules:
