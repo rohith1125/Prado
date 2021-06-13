@@ -7,7 +7,7 @@ Prado (dedicated to [Isabel Lifu](https://github.com/Isabel-Lifu-211207-XPrado))
 
 Until Prado is added to Linguist, the `JavaScript` percentage in this Repo represents `Prado`, whose Linguist colour will be `#d0a92c` (gold).
 
-### Interpreter (WIP)
+### Interpreter
 `Prado.py` is a ~~WIP~~ COMPLETE Python interpreter for `Windows 10` that translates between Prado, BF and text.
 
 The text-to-BF functionality is thanks to [this `Stack Exchange` post](https://codereview.stackexchange.com/questions/179492/text-to-brainfuck-translator).
