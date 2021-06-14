@@ -1,4 +1,4 @@
-<h1 align="center"><code>Prado</code></h1>
+<h1 align="center">:atom:<code>Prado</code>:electron:</h1>
 <p align="center">A BF-derivative esoteric programming language.</p>
 
 ---
@@ -10,7 +10,11 @@ Until Prado is added to Linguist, the `JavaScript` percentage in this Repo repre
 ### Interpreter
 `Prado.py` is a ~~WIP~~(done!) Python interpreter for `Windows 10` that translates between Prado, BF and text.
 
-The text-to-BF functionality is thanks to [this `Stack Exchange` post](https://codereview.stackexchange.com/questions/179492/text-to-brainfuck-translator). Long texts may take a while to encode, but it should get there eventually. Probably.
+The text-to-BF (and therefore text-to-Prado) functionality is thanks to [this `Stack Exchange` post](https://codereview.stackexchange.com/questions/179492/text-to-brainfuck-translator). Long texts may take a while to encode and decode, but it should get there eventually. Probably.
+
+Please note that text-to-BF and text-to-Prado are not optimised. I've never been good at [golf](https://code.golf).
+
+Also, please remove comments from BF/Prado code before running. The interpreter currently fails to convert invalid BF/Prado characters. This will likely not be addressed.
 
 ### Dependencies
 The interpreter requires the following `Python 3` modules:
@@ -32,18 +36,16 @@ BF | Prado
 `]` | )
 
 Where _n_ is the amount of `+`s or `-`s, and multiple `x`s or `y`s are given the power of their length. `x` or `y` directly followed by a numeral indicates an exponent. For example:
-
 ```brainfuck
 >++++[>>++++++++<<-]>++[>---<-]>
 ```
 Becomes:
-
 ```
 x+4(x2+8y2-1)x+2(x-3y-1)x
 ```
+If you don't understand, have some fun with the text-to-Prado translator.
 
 ### `Hello world!` in Prado
-
 In BF, the following program outputs "`Hello world!`":
 ```brainfuck
 ++++++++[>+++++++++<-]>.
@@ -77,5 +79,4 @@ This can be translated into Prado as:
 ```
 
 ### Contributing
-
-One of the biggest contributions you can give is creating your own Repo containing Prado code, so it can be added to Linguist. Please either Fork this Repo, or make your own code with the interpreter. Thanks!
+One of the biggest contributions you can give is creating your own Repository containing Prado code, so it can be added to Linguist. Please either Fork this Repository, or make your own code with the interpreter. Thanks!

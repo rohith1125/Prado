@@ -77,7 +77,10 @@ while z==0:
                             print(f'{f}')
                         elif x=='1':
                             try:
-                                print(f'"{brainfuck.evaluate(f)}"')
+                                if '\n' in f:
+                                    print(f'\"""{brainfuck.evaluate(f)}\"""')
+                                else:
+                                    print(f'"{brainfuck.evaluate(f)}"')
                             except:
                                 print('Failed!')
                     else:
