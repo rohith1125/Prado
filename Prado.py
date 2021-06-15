@@ -48,7 +48,10 @@ while z==0:
         while y!='':
             y=input('> ')
             if y!='':
-                f+=y
+                if f=='':
+                    f=y
+                else:
+                    f+=f'\n{y}'
         if f!='':
             if x=='1' or x=='3':#1#3
                 cls()
