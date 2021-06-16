@@ -28,7 +28,7 @@ while z==0:
     print('6. Text to BF')
     print('7. Exit')
     print('')
-    x=input('> ')
+    x=input('»')
     cls()
     if x in a:
         print('')
@@ -46,7 +46,7 @@ while z==0:
         f=''
         y=' '
         while y!='':
-            y=input('> ')
+            y=input('»')
             if y!='':
                 if f=='':
                     f=y
@@ -128,14 +128,20 @@ while z==0:
                 cls()
                 print('')
                 if e==0:
-                    print(f'{f}')
+                    if '\n' in f:
+                        print(f'\"""{f}\"""')
+                    else:
+                        print(f'{f}')
                 else:
                     print('Failed!')
             elif x=='5':#5
                 cls()
                 print('')
                 try:
-                    print(f'"{brainfuck.evaluate(f)}"')
+                    if '\n' in f:
+                        print(f'\"""{brainfuck.evaluate(f)}\"""')
+                    else:
+                        print(f'"{brainfuck.evaluate(f)}"')
                 except:
                     print('Failed!')
         else:
