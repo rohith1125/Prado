@@ -1,4 +1,5 @@
-<h1 align="center">:atom:<code>Prado</code>:electron:</h1>
+<img src="Logo.png" align="center" width="40%">
+<h1 align="center">Prado</h1>
 <p align="center">A BF-derivative esoteric programming language.</p>
 
 ---
