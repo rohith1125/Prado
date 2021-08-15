@@ -6,7 +6,7 @@
 
 ---
 ### Intro
-Prado (dedicated to [Isabel Lifu](https://github.com/Isabel-Lifu-211207-XPrado)) is an esolang that translates to [BF](https://en.wikipedia.org/wiki/Brainfuck) to be interpreted. Prado files have the `.pdn` extension.
+Prado (dedicated to [Isabel Lifu](https://github.com/Isabel-Lifu-211207-XPrado)'s dog, shown above) is an esolang that translates to [BF](https://en.wikipedia.org/wiki/Brainfuck) to be interpreted. Prado files have the `.pdn` extension.
 
 Until Prado is added to Linguist, the `JavaScript` percentage in this Repo represents `Prado`, whose Linguist colour will be `#d0a92c` (gold).
 
@@ -19,7 +19,7 @@ Please note that text-to-BF and text-to-Prado are not optimised. Maybe Prado sho
 
 Also, please remove comments from BF/Prado code before running. The interpreter currently fails to convert invalid BF/Prado characters. This will likely not be addressed.
 
-If you encounter any problems with the interpreter, please create an [Issue](https://github.com/TurnipGuy30/Prado/issues/new).
+If you encounter any problems with the interpreter, please [create an Issue](https://github.com/TurnipGuy30/Prado/issues/new).
 
 ### Dependencies
 The interpreter requires the following `Python 3` modules:
@@ -31,16 +31,16 @@ python -m pip install brainfuck_interpreter
 ### Key
 BF | Prado
 --- | ---
-`>` | x
-`<` | y
-`+` | _n_
-`-` | -_n_
-`.` | =
-`,` | z
-`[` | (
-`]` | )
+`>` | `x`
+`<` | `y`
+`+` | `n` or `+n`
+`-` | `-n`
+`.` | `=`
+`,` | Officially `z`, but not properly implemented
+`[` | `(`
+`]` | `)`
 
-Where _n_ is the amount of `+`s or `-`s, and multiple `x`s or `y`s are given the power of their length. `x` or `y` directly followed by a numeral indicates an exponent. For example:
+Where `n` is the amount of `+`s or `-`s, and multiple `x`s or `y`s are given the power of their length. `x` or `y` directly followed by a numeral indicates an exponent. `=` is always preceded with a new line. For example:
 ```brainfuck
 >++++[>>++++++++<<-]>++[>---<-]>
 ```
@@ -85,4 +85,4 @@ This can be translated into Prado as:
 More examples like this can be found in [the `/examples` directory](https://github.com/TurnipGuy30/Prado/tree/main/examples).
 
 ### Contributing
-One of the biggest contributions you can give is creating your own Repository containing Prado code, so it can be added to Linguist. Please either Fork this Repository, or make your own code with the interpreter. Thanks!
+One of the biggest contributions you can give is creating your own Repository containing Prado code, so it can be added to Linguist. Please either Fork this Repository, or make your own code with the interpreter. If you have any questions, head over to [Discussions](https://github.com/TurnipGuy30/Prado/discussions). Thanks!
