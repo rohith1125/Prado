@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="Logo.png" align="center" width="25%">
+  <img src="logo.png" align="center" width="25%">
 </p>
 <h1 align="center">Prado</h1>
 <p align="center">A BF-derivative esoteric programming language.</p>

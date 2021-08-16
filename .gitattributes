@@ -1,3 +1,2 @@
 * text=auto
-* linguist-detectable=true
-*.pdn linguist-language=JavaScript linguist-detectable=true
+*.pdn linguist-detectable=true linguist-language=JavaScript
