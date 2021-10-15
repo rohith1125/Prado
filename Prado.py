@@ -18,22 +18,10 @@ z=0
 while z==0:
     e=0
     x=''
-    print('')
-    print('What would you like to do?')
-    print('1. Prado to text')
-    print('2. Text to Prado')
-    print('3. Prado to BF')
-    print('4. BF to Prado')
-    print('5. BF to text')
-    print('6. Text to BF')
-    print('7. Exit')
-    print('')
-    x=input('»')
+    x=input('\nWhat would you like to do?\n1. Prado to text\n2. Text to Prado\n3. Prado to BF\n4. BF to Prado\n5. BF to text\n6. Text to BF\n7. Exit\n\n»')
     cls()
     if x in a:
-        print('')
-        print('Enter blank line when done.')
-        print('')
+        print('\nEnter blank line when done.\n')
         if x=='1' or x=='3':
             print('Prado code:')
         elif x=='4' or x=='5':
@@ -59,21 +47,8 @@ while z==0:
                     n=256
                     for i in range(n):
                         n-=1
-                        f=f.replace(f'x{str(n)}','>'*(n))
-                        f=f.replace(f'y{str(n)}','<'*(n))
-                        f=f.replace(f'+{str(n)}','+'*(n))
-                        f=f.replace(f'-{str(n)}','-'*(n))
-                        f=f.replace(str(n),'+'*(n))
-                    f=f.replace('\n','')
-                    f=f.replace(' ','')
-                    f=f.replace('=','.')
-                    f=f.replace('(','[')
-                    f=f.replace(')',']')
-                    f=f.replace('x','>')
-                    f=f.replace('y','<')
-                    f=f.replace('z',',')
-                    f=f.replace('<>','')
-                    f=f.replace('><','')
+                        f=f.replace(f'x{str(n)}','>'*(n)).replace(f'y{str(n)}','<'*(n)).replace(f'+{str(n)}','+'*(n)).replace(f'-{str(n)}','-'*(n)).replace(str(n),'+'*(n))
+                    f=f.replace('\n','').replace(' ','').replace('=','.').replace('(','[').replace(')',']').replace('x','>').replace('y','<').replace('z',',').replace('<>','').replace('><','')
                     print('')
                     if f!='':
                         if x=='3':
@@ -81,9 +56,9 @@ while z==0:
                         elif x=='1':
                             try:
                                 if '\n' in f:
-                                    print(f'\"""{brainfuck.evaluate(f)}\"""')
+                                    print(f'{brainfuck.evaluate(f)}')
                                 else:
-                                    print(f'"{brainfuck.evaluate(f)}"')
+                                    print(f'{brainfuck.evaluate(f)}')
                             except:
                                 print('Failed!')
                     else:
@@ -91,34 +66,15 @@ while z==0:
             elif x=='2' or x=='4' or x=='6':#2#4#6
                 if x=='2' or x=='6':
                     try:
-                        f=brainfuck_print([letter_to_brainfuck(i) for i in list(f)])
-                        f=f.replace('\n','')
+                        f=brainfuck_print([letter_to_brainfuck(i) for i in list(f)]).replace('\n','')
                     except:
                         e=1
                 if x=='2' or x=='4':
                     n=256
                     for i in range(n-1):
-                        f=f.replace('>'*(n),f'x{str(n)}')
-                        f=f.replace('<'*(n),f'y{str(n)}')
-                        f=f.replace('+'*(n),f'+{str(n)}')
-                        f=f.replace('-'*(n),f'-{str(n)}')
+                        f=f.replace('>'*(n),f'x{str(n)}').replace('<'*(n),f'y{str(n)}').replace('+'*(n),f'+{str(n)}').replace('-'*(n),f'-{str(n)}')
                         n-=1
-                    f=f.replace('>','x')
-                    f=f.replace('<','y')
-                    f=f.replace('\n','')
-                    f=f.replace(' ','')
-                    f=f.replace('.','\n=')
-                    f=f.replace('\n=\n','\n=xy\n')
-                    f=f.replace('[','(')
-                    f=f.replace(']',')')
-                    f=f.replace(',','z')
-                    f=f.replace('=+','=')
-                    f=f.replace('(+','(')
-                    f=f.replace('+)','+1)')
-                    f=f.replace('+\n','+1\n)')
-                    f=f.replace('-)','-1)')
-                    f=f.replace('-\n','-1\n)')
-                    f=f.replace('\n)=','\n=')
+                    f=f.replace('>','x').replace('<','y').replace('\n','').replace(' ','').replace('.','\n=').replace('\n=\n','\n=xy\n').replace('[','(').replace(']',')').replace(',','z').replace('=+','=').replace('(+','(').replace('+)','+1)').replace('+\n','+1\n)').replace('-)','-1)').replace('-\n','-1\n)').replace('\n)=','\n=')
                     if f[0]=='+':
                         f=f[1:]
                     if f[len(f)-1]=='=':
@@ -129,7 +85,7 @@ while z==0:
                 print('')
                 if e==0:
                     if '\n' in f:
-                        print(f'\"""{f}\"""')
+                        print(f'{f}')
                     else:
                         print(f'{f}')
                 else:
@@ -139,18 +95,16 @@ while z==0:
                 print('')
                 try:
                     if '\n' in f:
-                        print(f'\"""{brainfuck.evaluate(f)}\"""')
+                        print(f'{brainfuck.evaluate(f)}')
                     else:
-                        print(f'"{brainfuck.evaluate(f)}"')
+                        print(f'{brainfuck.evaluate(f)}')
                 except:
                     print('Failed!')
         else:
             cls()
-            print('')
-            print('Failed!')
+            print('\nFailed!')
     elif x==str(int(a[len(a)-1])+1):
         z=1
     else:
         cls()
-        print('')
-        print('Invalid!')
+        print('\nInvalid!')

@@ -8,7 +8,7 @@
 ### Intro
 Prado (dedicated to [@Valensce](https://github.com/Valensce)'s dog, shown above) is an esolang that translates to [BF](https://en.wikipedia.org/wiki/Brainfuck) to be interpreted. Prado files have the `.pdn` extension.
 
-Until Prado is added to Linguist, the `JavaScript` percentage in this Repo represents `Prado`, whose Linguist colour will be `#d0a92c` (gold).
+Until Prado is added to Linguist, the `J` percentage in this Repo represents `Prado`, whose Linguist colour will be `#d0a92c` (gold).
 
 ### Interpreter
 `Prado.py` is a Python 3 interpreter for `Windows 10` that translates between Prado, BF and text.
@@ -42,11 +42,12 @@ BF | Prado
 
 Where `n` is the amount of `+`s or `-`s, and multiple `x`s or `y`s are given the power of their length. `x` or `y` directly followed by a numeral indicates an exponent. `=` is always preceded with a new line. For example:
 ```brainfuck
->++++[>>++++++++<<-]>++[>---<-]>
+>++++[>>++++++++<<-]>++[>---<-]>.
 ```
 Becomes:
 ```
 x+4(x2+8y2-1)x+2(x-3y-1)x
+=xy
 ```
 If you don't understand, try out the text-to-Prado translator.
 
@@ -82,7 +83,9 @@ This can be translated into Prado as:
 =x+1
 =xy
 ```
-More examples like this can be found in [the `/examples` directory](https://github.com/TurnipGuy30/Prado/tree/main/examples).
+More examples like this can be found in [the `/examples` directory](https://github.com/TurnipGuy30/Prado/tree/main/examples). My favourite is `Characters.pdn`, which lists all possible characters.
+
+I tried to encode the entire *Shrek 2* script, but it cut of some of the beginning, I didn't check how much. But that's related to the module, so there's nothing I can do to fix it.
 
 ### Contributing
 One of the biggest contributions you can give is creating your own Repository containing Prado code, so it can be added to Linguist. Please either Fork this Repository, or make your own code with the interpreter. If you have any questions, head over to [Discussions](https://github.com/TurnipGuy30/Prado/discussions). Thanks!
