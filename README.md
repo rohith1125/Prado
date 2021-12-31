@@ -3,8 +3,11 @@
 </p>
 <h1 align="center">Prado</h1>
 <p align="center">A BF-derivative esoteric programming language.</p>
+<hr>
+<p align="center">
+	<a href="https://github.com/PradoLang"><img src="https://gpvc.arturio.dev/PradoLang"></a>
+</p>
 
----
 ### Intro
 Prado (dedicated to [@Valensce](https://github.com/Valensce)'s dog, shown above) is an esolang that translates to [BF](https://en.wikipedia.org/wiki/Brainfuck) to be interpreted. Prado files have the `.pdn` extension.
 
