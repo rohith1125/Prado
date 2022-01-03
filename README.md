@@ -11,7 +11,7 @@
 ### Intro
 Prado (dedicated to [@Valensce](https://github.com/Valensce)'s dog, shown above) is an esolang that translates to [BF](https://en.wikipedia.org/wiki/Brainfuck) to be interpreted. Prado files have the `.pdn` extension.
 
-Until Prado is added to Linguist, the `J` percentage in this Repo represents `Prado`, whose Linguist colour will be `#d0a92c` (gold).
+Until Prado is added to Linguist, the `JavaScript` percentage in this repository represents `Prado`, whose Linguist colour will be `#d0a92c` (gold). Note: this might not always show up.
 
 ### Interpreter
 `Prado.py` is a Python 3 interpreter for `Windows 10` that translates between Prado, BF and text.
@@ -22,13 +22,12 @@ Please note that text-to-BF and text-to-Prado are not optimised. Maybe Prado sho
 
 Also, please remove comments from BF/Prado code before running. The interpreter currently fails to convert invalid BF/Prado characters. This will likely not be addressed.
 
-If you encounter any problems with the interpreter, please [create an Issue](https://github.com/TurnipGuy30/Prado/issues/new).
+If you encounter any problems with the interpreter, please [create an Issue](https://github.com/PradoLang/Prado/issues/new).
 
 ### Dependencies
 The interpreter requires the following `Python 3` modules:
 ```
-python -m pip install brainfuck
-python -m pip install brainfuck_interpreter
+python -m pip install brainfuck, brainfuck_interpreter
 ```
 
 ### Key
@@ -36,7 +35,7 @@ BF | Prado
 --- | ---
 `>` | `x`
 `<` | `y`
-`+` | `n` or `+n`
+`+` | `n` or `+n` depending on context
 `-` | `-n`
 `.` | `=`
 `,` | Officially `z`, but not properly implemented
@@ -86,9 +85,9 @@ This can be translated into Prado as:
 =x+1
 =xy
 ```
-More examples like this can be found in [the `/examples` directory](https://github.com/TurnipGuy30/Prado/tree/main/examples). My favourite is `Characters.pdn`, which lists all possible characters.
+More examples like this can be found in [the `/examples` directory](https://github.com/PradoLang/Prado/tree/main/examples). My favourite is `Characters.pdn`, which lists all possible characters.
 
 I tried to encode the entire *Shrek 2* script, but it cut of some of the beginning, I didn't check how much. But that's related to the module, so there's nothing I can do to fix it.
 
 ### Contributing
-One of the biggest contributions you can give is creating your own Repository containing Prado code, so it can be added to Linguist. Please either Fork this Repository, or make your own code with the interpreter. If you have any questions, head over to [Discussions](https://github.com/TurnipGuy30/Prado/discussions). Thanks!
+One of the biggest contributions you can give is creating your own Repository containing Prado code, so it can be added to Linguist. Please either Fork this Repository, or make your own code with the interpreter. If you have any questions, head over to [Discussions](https://github.com/PradoLang/Prado/discussions). Thanks!
