@@ -1,0 +1,2 @@
+brainfuck==1.0.2
+brainfuck_interpreter==1.0.0

@@ -1,16 +1,13 @@
 '''
 REPOSITORY LINK:
-https://github.com/TurnipGuy30/Prado
-REQUIRED MODULES:
-python -m pip install brainfuck
-python -m pip install brainfuck_interpreter
+https://github.com/PradoLang/Prado
 '''
-import brainfuck,os,webbrowser
+import brainfuck,os
 os.system('color 0a')
 cls=lambda:os.system('cls')
 def letter_to_brainfuck(letter):
     num=ord(letter)
-    return '+'*int(num/10)+'[>++++++++++<-]>'+'+'*(num%10)
+    return '+' * (num // 10) + '[>++++++++++<-]>' + '+'*(num%10)
 def brainfuck_print(letter_list):
     return ''.join([i+'.>\n'for i in letter_list])
 a=['1','2','3','4','5','6']
