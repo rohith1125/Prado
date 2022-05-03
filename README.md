@@ -12,11 +12,11 @@
 
 Prado (dedicated to [@Valensce](https://github.com/Valensce)'s dog, shown above) is an esolang that translates to [BF](https://en.wikipedia.org/wiki/Brainfuck) to be interpreted. Prado files have the `.pdn` extension.
 
-Until Prado is added to Linguist, the `JavaScript` percentage in this repository represents `Prado`, whose Linguist colour will be `#d0a92c` (gold). Note: this might not always show up.
+Until Prado is added to Linguist, the `JavaScript` percentage in this repository represents `Prado`, whose Linguist colour will be `#d0a92c` (gold). Note: this might not always appear on the repository page.
 
 ### Interpreter
 
-`app/main.py` is a Python 3 interpreter for `Windows 10` that translates between Prado, BF and text.
+`app/main.py` is a Python 3 interpreter for Windows that translates between Prado, BF and text.
 
 The text-to-BF (and therefore text-to-Prado) functionality is thanks to [this `Stack Exchange` post](https://codereview.stackexchange.com/questions/179492/text-to-brainfuck-translator). Long texts may take a while to encode and decode, but it should get there eventually. Probably.
 
