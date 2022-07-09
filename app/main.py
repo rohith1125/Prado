@@ -3,7 +3,20 @@ REPOSITORY LINK:
 https://github.com/PradoLang/Prado
 '''
 import brainfuck,os
-os.system('color 0a')
+print("Select theme")
+
+print("0 = Black       8 = Gray")
+print("1 = Blue        9 = Light Blue")
+print("2 = Green       A = Light Green")
+print("3 = Aqua        B = Light Aqua")
+print("4 = Red         C = Light Red")
+print("5 = Purple      D = Light Purple")
+print("6 = Yellow      E = Light Yellow")
+print("7 = White       F = Light White")
+print("")
+
+command = input('Select theme: ')
+os.system(command)
 cls=lambda:os.system('cls')
 def letter_to_brainfuck(letter):
     num=ord(letter)
